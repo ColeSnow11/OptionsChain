@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using HtmlAgilityPack;
 
-namespace YahooOptionsChain
+namespace OptionsChain
 {
     class Program
     {
@@ -23,8 +23,10 @@ namespace YahooOptionsChain
             {
                 if (newNode.InnerText.Length > 3)
                 {
-                    if (newNode.InnerText.Substring(0, 3) == ticker && newNode.InnerText.Substring(newNode.InnerText.Length - 1) == "%")
+                    if (newNode.HasClass("data-col0") == true)
                     {
+                        Console.WriteLine(newNode.InnerText);
+                        Console.ReadLine();
                         callList.Add(newNode.InnerText);
                     }
                 }
