@@ -27,6 +27,7 @@ namespace OptionsChain
                     {
                         Console.WriteLine(newNode.InnerText);
                         Console.ReadLine();
+                        Console.WriteLine();
                         callList.Add(newNode.InnerText);
                     }
                 }
